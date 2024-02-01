@@ -40,6 +40,10 @@ class DiscoveredDevice extends $DiscoveredDevice {
   @CustomEquality(DeepCollectionEquality())
   final Uint8List manufacturerData;
 
+  /// Raw scan record
+  @CustomEquality(DeepCollectionEquality())
+  final Uint8List rawScanRecordData;
+
   final int rssi;
 
   final Connectable connectable;
@@ -50,6 +54,7 @@ class DiscoveredDevice extends $DiscoveredDevice {
     required this.serviceData,
     required this.manufacturerData,
     required this.rssi,
+    required this.rawScanRecordData,
     required this.serviceUuids,
     this.connectable = Connectable.unknown,
   });
